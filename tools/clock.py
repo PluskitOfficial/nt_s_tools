@@ -1,4 +1,5 @@
 import json
+import os
 import re
 from decimal import Decimal
 
@@ -210,7 +211,8 @@ def initial_req():
         ff = True
         initial_page = 1
         while ff:
-            headers = {"Authorization": 'token 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'}
+            github_token = os.getenv('github_token')
+            headers = {"Authorization": github_token}
             # req = requests.get(url, headers=headers, proxies=proxies,params={'state': choice_, 'per_page': '100', 'page': str(initial_page)}).json()
             req = request_data_get(url, headers=headers,
                                    params={'state': choice_, 'per_page': '100', 'page': str(initial_page)})
