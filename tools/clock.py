@@ -210,8 +210,7 @@ def initial_req():
         ff = True
         initial_page = 1
         while ff:
-            headers = {"Authorization": 'token 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'}
-            # req = requests.get(url, headers=headers, proxies=proxies,params={'state': choice_, 'per_page': '100', 'page': str(initial_page)}).json()
+            headers = {"Authorization": 'token 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'}
             req = request_data_get(url, headers=headers,
                                    params={'state': choice_, 'per_page': '100', 'page': str(initial_page)})
             print(f'initial_req--{req}')
